@@ -1,0 +1,8 @@
+@model User;
+
+<h1>Made it in</h1>
+@if(Model.UserId != 0)
+{
+    <p>@Model.FirstName</p>
+}
+<a class="btn btn-danger"href="/logout">Log out</a>
