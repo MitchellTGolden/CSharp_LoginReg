@@ -109,6 +109,10 @@ namespace LoginReg.Controllers
         [HttpGet("success")]
         public IActionResult Success()
         {
+            if (LoggedInUser() == null)
+            {
+                return RedirectToAction("Index");
+            }
             return View("Success", LoggedInUser());
         }
 
